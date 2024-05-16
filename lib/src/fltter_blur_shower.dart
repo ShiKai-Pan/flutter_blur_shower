@@ -7,15 +7,15 @@ class FlutterBlurShower {
   double sigma = 10;
   Color backgroundColor = const Color.fromRGBO(0, 0, 0, 0.32);
 
-  init({
+  static init({
     double? sigma,
     Color? backgroundColor,
   }) {
     if (sigma != null) {
-      this.sigma = sigma;
+      FlutterBlurShower.instance.sigma = sigma;
     }
     if (backgroundColor != null) {
-      this.backgroundColor = backgroundColor;
+      FlutterBlurShower.instance.backgroundColor = backgroundColor;
     }
   }
 }
