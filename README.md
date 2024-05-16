@@ -1,3 +1,7 @@
+Language: [English](README.md) | [中文](README_zh-TW.md)
+
+---
+
 # flutter_blur_shower
 
 A Flutter package to apply Gaussian blur to the background of dialogs, popups, and modalBottomSheets.

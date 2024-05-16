@@ -1,3 +1,7 @@
+Language: [English](README.md) | [中文](README_zh-TW.md)
+
+---
+
 # flutter_blur_shower
 
 一個用來在 Flutter 中將 dialog、popup 和 modalBottomSheet 的背景設置成高斯模糊的套件。

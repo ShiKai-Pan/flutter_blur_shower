@@ -1,6 +1,6 @@
 name: flutter_blur_shower
 description: "A package for showing dialogs, popups, and modal bottom sheets with blurred background."
-version: 1.0.0
+version: 0.1.1
 homepage: https://globetrotter-studio.com
 repository: https://github.com/ShiKai-Pan/flutter_blur_shower
 issue_tracker: https://github.com/ShiKai-Pan/flutter_blur_shower/issues
