@@ -1,29 +1,29 @@
 # flutter_blur_shower
 
-A Flutter package to apply Gaussian blur to the background of dialogs, popups, and modalBottomSheets.
+一個用來在 Flutter 中將 dialog、popup 和 modalBottomSheet 的背景設置成高斯模糊的套件。
 
-## Features
+## 功能
 
-- Apply Gaussian blur to the background of dialogs.
-- Apply Gaussian blur to the background of modalBottomSheets.
-- Easy to use with simple API.
+- 將 dialog 背景設置成高斯模糊。
+- 將 modalBottomSheet 背景設置成高斯模糊。
+- 簡單易用的 API。
 
-## Installation
+## 安裝
 
-Add `flutter_blur_shower` to your `pubspec.yaml` file:
+在您的 `pubspec.yaml` 文件中添加 `flutter_blur_shower`：
 
 ```yaml
 dependencies:
   flutter_blur_shower: ^0.1.0
 ```
 
-Then, run `flutter pub get` to install the package.
+然後運行 `flutter pub get` 安裝套件。
 
-## Usage
+## 用法
 
-### Initialization
+### 初始化
 
-Before using the blur effects, initialize the `FlutterBlurShower` with your desired blur sigma and background color:
+在使用模糊效果之前，請先用您需要的模糊 sigma 和背景顏色初始化 `FlutterBlurShower`：
 
 ```dart
 FlutterBlurShower.init(
@@ -32,9 +32,9 @@ FlutterBlurShower.init(
 );
 ```
 
-### Show Blur Dialog
+### 顯示模糊對話框
 
-To show a dialog with a blurred background, use `showBlurDialog`:
+要顯示背景為模糊的對話框，使用 `showBlurDialog`：
 
 ```dart
 import 'package:flutter/material.dart';
@@ -45,11 +45,11 @@ void _showDialog(BuildContext context) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        title: Text('Blur Dialog'),
-        content: Text('This is a dialog with a blurred background.'),
+        title: Text('模糊對話框'),
+        content: Text('這是一個背景為模糊的對話框。'),
         actions: <Widget>[
           TextButton(
-            child: Text('Close'),
+            child: Text('關閉'),
             onPressed: () {
               Navigator.of(context).pop();
             },
@@ -61,9 +61,9 @@ void _showDialog(BuildContext context) {
 }
 ```
 
-### Show Blur Modal Bottom Sheet
+### 顯示模糊底部彈出框
 
-To show a modal bottom sheet with a blurred background, use `showBlurModalBottomSheet`:
+要顯示背景為模糊的底部彈出框，使用 `showBlurModalBottomSheet`：
 
 ```dart
 import 'package:flutter/material.dart';
@@ -76,7 +76,7 @@ void _showModalBottomSheet(BuildContext context) {
       return Container(
         height: 200,
         child: Center(
-          child: Text('This is a modal bottom sheet with a blurred background.'),
+          child: Text('這是一個背景為模糊的底部彈出框。'),
         ),
       );
     },
@@ -84,25 +84,25 @@ void _showModalBottomSheet(BuildContext context) {
 }
 ```
 
-## API Reference
+## API 參考
 
 ### `FlutterBlurShower`
 
 - **`FlutterBlurShower.init({required double sigma, required Color backgroundColor})`**
-    - Initializes the `FlutterBlurShower` with the given `sigma` (blur intensity) and `backgroundColor`.
+    - 用給定的 `sigma`（模糊強度）和 `backgroundColor` 初始化 `FlutterBlurShower`。
 
 - **`FlutterBlurShower.instance`**
-    - Singleton instance of `FlutterBlurShower`.
+    - `FlutterBlurShower` 的單例實例。
 
 - **`double get sigma`**
-    - Returns the blur sigma value.
+    - 返回模糊的 sigma 值。
 
 - **`Color get backgroundColor`**
-    - Returns the background color.
+    - 返回背景顏色。
 
-## Example
+## 範例
 
-Here is a full example demonstrating how to use `flutter_blur_shower`:
+這是一個完整的範例，展示如何使用 `flutter_blur_shower`：
 
 ```dart
 import 'package:flutter/material.dart';
@@ -123,18 +123,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Blur Shower Example'),
+          title: Text('模糊效果範例'),
         ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               ElevatedButton(
-                child: Text('Show Blur Dialog'),
+                child: Text('顯示模糊對話框'),
                 onPressed: () => _showDialog(context),
               ),
               ElevatedButton(
-                child: Text('Show Blur Modal Bottom Sheet'),
+                child: Text('顯示模糊底部彈出框'),
                 onPressed: () => _showModalBottomSheet(context),
               ),
             ],
@@ -149,11 +149,11 @@ class MyApp extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Blur Dialog'),
-          content: Text('This is a dialog with a blurred background.'),
+          title: Text('模糊對話框'),
+          content: Text('這是一個背景為模糊的對話框。'),
           actions: <Widget>[
             TextButton(
-              child: Text('Close'),
+              child: Text('關閉'),
               onPressed: () {
                 Navigator.of(context).pop();
               },
@@ -171,7 +171,7 @@ class MyApp extends StatelessWidget {
         return Container(
           height: 200,
           child: Center(
-            child: Text('This is a modal bottom sheet with a blurred background.'),
+            child: Text('這是一個背景為模糊的底部彈出框。'),
           ),
         );
       },
@@ -180,11 +180,10 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-## Plans
-1. Add blur effects for other types of popups.
-2. Provide more customization options.
+## 計畫
+1. 完善其他彈出框的模糊效果。
+2. 提供更多的自定義選項。
 
-## License
+## 授權
 
-This project is licensed under the BSD-3-Clause License - see the [LICENSE](LICENSE) file for details.
-
+此專案根據 BSD-3-Clause 授權條款許可 - 詳情請參閱 [LICENSE](LICENSE) 文件。
