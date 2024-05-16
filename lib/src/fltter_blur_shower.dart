@@ -4,18 +4,19 @@ class FlutterBlurShower {
   static FlutterBlurShower get instance => _instance;
   static final FlutterBlurShower _instance = FlutterBlurShower._();
   FlutterBlurShower._();
-  double sigma = 10;
-  Color backgroundColor = const Color.fromRGBO(0, 0, 0, 0.32);
+  double get sigma => _sigma;
+  double _sigma = throw UnimplementedError(
+      'sigma is not implemented, Please call FlutterBlurShower.init method first.');
+
+  Color get backgroundColor => _backgroundColor;
+  Color _backgroundColor = throw UnimplementedError(
+      'backgroundColor is not implemented, Please call FlutterBlurShower.init method first.');
 
   static init({
-    double? sigma,
-    Color? backgroundColor,
+    required double sigma,
+    required Color backgroundColor,
   }) {
-    if (sigma != null) {
-      FlutterBlurShower.instance.sigma = sigma;
-    }
-    if (backgroundColor != null) {
-      FlutterBlurShower.instance.backgroundColor = backgroundColor;
-    }
+    FlutterBlurShower.instance._sigma = sigma;
+    FlutterBlurShower.instance._backgroundColor = backgroundColor;
   }
 }
